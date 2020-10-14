@@ -1,6 +1,6 @@
 
---Set @addr = 'Please pass addres of file folowed by file name'
--- write query to extract filename class1.sql from the address
+--Set @addr = 'Please pass address of file followed by file name
+-- write query to extract filename from the address
 
 
 DECLARE @addr VARCHAR(1000)
@@ -21,22 +21,3 @@ SELECT REVERSE(@sub) AS file_name_result
 
 
 
-
-
-
-
-
-
-
-
---SELECT CHARINDEX('\',REVERSE(@addr)) AS INDEXVALUE
---SELECT (SUBSTRING(@rev), 1,11) AS file_name_)
-
-DECLARE @index smallint
-SET @index = SELECT CHARINDEX('\',REVERSE(@addr)) AS INDEXVALUE
-SELECT @index 
-
-
-
-
---SELECT SUBSTRING(@addr, 1, (SELECT CHARINDEX('\',REVERSE(@addr))) AS INDEXVALUE) AS file_name_
